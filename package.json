@@ -9,7 +9,7 @@
     "ui": "vue ui"
   },
   "dependencies": {
-    "core-js": "3.21.1",
+    "core-js": "3.23.3",
     "vue": "3.2.31"
   },
   "devDependencies": {
