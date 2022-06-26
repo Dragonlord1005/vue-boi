@@ -1,32 +1,52 @@
+<script setup lang="ts">
+import { ref } from 'vue'
+
+defineProps<{ msg: string }>()
+
+const count = ref(0)
+</script>
+
 <template>
-  <div class="hello">
-    <h1>My own Blog</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a
-        href="https://cli.vuejs.org"
-        target="_blank"
-        rel="noopener"
-      >vue-cli documentation</a>.
-    </p>
-  </div>
+  <h1>{{ msg }}</h1>
+
+  <p>
+    Recommended IDE setup:
+    <a href="https://code.visualstudio.com/" target="_blank">VS Code</a>
+    +
+    <a href="https://github.com/johnsoncodehk/volar" target="_blank">Volar</a>
+  </p>
+
+  <p>See <code>README.md</code> for more information.</p>
+
+  <p>
+    <a href="https://vitejs.dev/guide/features.html" target="_blank">
+      Vite Docs
+    </a>
+    |
+    <a href="https://v3.vuejs.org/" target="_blank">Vue 3 Docs</a>
+  </p>
+
+  <button type="button" @click="count++">count is: {{ count }}</button>
+  <p>
+    Edit
+    <code>components/HelloWorld.vue</code> to test hot module replacement.
+  </p>
 </template>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
 a {
   color: #42b983;
+}
+
+label {
+  margin: 0 0.5em;
+  font-weight: bold;
+}
+
+code {
+  background-color: #eee;
+  padding: 2px 4px;
+  border-radius: 4px;
+  color: #304455;
 }
 </style>
